@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap');
+/* 'Alumni Sans Pinstripe', sans-serif; */
+/* 'Aboreto', cursive; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    width: 100%;
+    background-color: var(--color6);
+}
+
+:root{
+    --color1: #9e9ea3;
+    --color2: #e0e1e6;
+    --color3: #000000;
+    --color4: #2f2e2dd9;
+    --color5: #302e2c;  
+    --color6: #ffffff;
+
+}
+
+/* ####################### */
+/* frames */
+
+.section-container{
+    background-color: var(--color5);
+}
+
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 50px 0px;
+    width: 100%;
+    max-width: 1300px;
+}
+
+.section-title{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.section-p{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.section-p-sml{
+    font-size: 0.6rem;
+    font-weight: 300;
+}
+
+/* ####################### */
+
+
+
+/* ####################### */
+/* header */
+
+#toggle-menu{
+    display: none;
+}
+
+.header{
+    margin:0 auto;
+    max-width: 1300px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px 0 50px;
+    background-color: var(--color5);
+}
+
+.header-container{
+    position: sticky;
+    top: 0%;
+    z-index: 9999;
+}
+
+.logo-container{
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-text{
+    font-family: 'Aboreto', cursive;;
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--color1);
+}
+
+.navbar,
+.navbar-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-list{
+    gap: 50px;
+}
+
+.navbar i{
+    font-size: 30px;
+    color: var(--color1);
+    cursor: pointer;
+    display: none;
+}
+
+.navbar a{
+    font-size: 1.3rem;
+    color: var(--color1);
+    font-weight: 600;
+}
+
+.navbar a:nth-child(-n+4):hover{
+    color: var(--color2);
+    transition: all 0.3s linear;
+}
+
+.navbar-list li:nth-child(5) > a{
+    border: 1px solid var(--color2);
+    border-radius: 3px;
+    padding: 3px;
+    transition: all 0.3s linear;
+}
+
+.navbar-list li:nth-child(6) > a{
+    border: 1px solid var(--color2);
+    border-radius: 3px;
+    padding: 3px;
+    transition: all 0.3s linear;
+}
+
+.navbar-list li:nth-child(5) > a:hover{
+    background-color: var(--color2);
+    transition: all 0.3s linear;
+    color: var(--color5);
+}
+
+.navbar-list li:nth-child(6) > a:hover{
+    background-color: var(--color2);
+    transition: all 0.3s linear;
+    color: var(--color5);
+}
+
+@media (max-width:992px){
+    .header{
+        padding: 0px 50px 0px 20px;
+    }
+
+    .navbar i{
+        display: block;
+    }
+
+    .navbar-list{
+        position: absolute;
+        background-color: var(--color5);
+        flex-direction: column;
+        top: 80px;
+        right: 0;
+        width: 100%; 
+        display: none;
+        z-index: 9999;
+        height: calc(100vh - 100px);
+    }
+
+    .navbar-list li:nth-child(5) > a:hover{
+        background-color: var(--color2);
+        transition: all 0.3s linear;
+        color: var(--color5);
+    }
+    
+    .navbar-list li:nth-child(6) > a:hover{
+        background-color: var(--color2);
+        transition: all 0.3s linear;
+        color: var(--color5);
+    }
+
+    #toggle-menu:checked + .navbar-list{
+        display: flex;
+    }
+
+
+}
+/* ####################### */
+
+
+/* ####################### */
+/* hero */
+
+.hero-section{
+    background-image: url(./img/carrusel/HRY_8739.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 90vh;
+    display: flex; 
+    justify-content: center;
+    text-align: center;
+}
+
+.description-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.text-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-title{
+    font-size: 70px;
+    font-weight: bold;
+    color: var(--color6);
+}
+
+.hero-p{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--color6);
+}
+
+.line-decoration{
+    height: 3px;
+    width: 40vh;
+    background-color: var(--color6);
+    margin-top: 30px;
+}
+/* ####################### */
+/* Sobre mi */
+
+.about{
+    max-width: 100%;
+    height: 680px;
+    display: flex;
+    background-color: var(--color2);
+}
+
+.container-about{
+    height: 100%;
+    width: 50%;
+    display:flex;
+    align-items: center;
+}
+
+.content-about{
+    text-align: center;
+    margin: 25px;
+}
+
+.content-about h2{
+    text-align: left;
+    font-size: 45px;
+    padding-bottom: 50px;
+}
+.line-about{
+    height: 2px;
+    width: 70px;
+    background-color: var(--color1);
+    margin-bottom: 35px;
+}
+
+.content-about p{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color5);
+}
+
+.content-about p:last-child{
+    padding-top: 40px;
+}
+
+.image-about{
+    height: 100%;
+    width: 50%;
+    background-image: url(./img/carrusel/HRY_8758.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* ####################### */
+
+
+/* ####################### */
+/* galery */
+
+.galery-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150vh;
+}
+
+.galery-container .galery{
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: 200px 350px 250px 350px;
+    grid-template-rows: 300px 450px 250px;
+    gap: 2rem;
+    margin: 70px 0;
+}
+
+.item{
+    border-radius: 5px;
+}
+
+.galery-container .galery .item-galery1{
+    background-image: url(./img/galery/DSC_9106.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1/3;
+}
+
+
+.galery-container .galery .item-galery2{
+    background-image: url(./img/galery/HRY_6494.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 3/5;
+}
+
+
+.galery-container .galery .item-galery3{
+    background-image: url(./img/galery/HRY_3892.jpg);
+    background-position: -50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-row: 2/4;
+}
+
+
+
+.galery-container .galery .item-galery4{
+    background-image: url(./img/galery/DSC_9259.jpg);
+    background-position: -250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.galery-container .galery .item-galery5{
+    background-image: url(./img/galery/HRY_3908-2.jpg);
+    background-position: -350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.galery-container .galery .item-galery6{
+    background-image: url(./img/galery/HRY_3895.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.galery-container .galery .item-galery7{
+    background-image: url(./img/galery/DSC_9202.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 2/4;
+}
+
+
+.galery-container .galery .item-galery8{
+    background-image: url(./img/galery/HRY_6552.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.galery-container .galery .item-galery9{
+    background-color: sienna;
+}
+
+/* ####################### */
+
+
+/* ####################### */
+/* contact */
+
+
+
+
+
+
+
+
+
+/* ####################### */
+
+
+/* ####################### */
+/* login */
+.login-main{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(img/login-img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    height: 500px;
+    width: 400px;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 10px;
+}
+
+.form h2{
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--color6);
+}
+
+.input-line{
+    height: 2px;
+    width: 20vh;
+    background-color: var(--color1);
+    margin: 20px 0 35px 0;
+}
+
+.form input{
+    height: 35px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #302e2c;
+    background-color: var(--color2);
+    padding: 0 10px;
+    margin-bottom: 15px;
+}
+
+.form button{
+    width: 15vh;
+    height: 4vh;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: var(--color1);
+    color: var(--color5);
+    cursor: pointer;
+}
+
+.form button:hover{
+    background-color: var(--color5);
+    color:var(--color2);
+    transition: all 0.4s linear;
+}
+
+.form a{
+    color: var(--color6);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.form p{
+    color: var(--color6);
+}
+
+
+
+
+
+
+/* ####################### */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ####################### */
+
+
