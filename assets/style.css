@@ -19,7 +19,7 @@ html{
 
 body {
     width: 100%;
-    background-color: var(--color6);
+    background-color: var(--color5);
 }
 
 :root{
@@ -45,7 +45,7 @@ body {
     align-items: center;
     margin: 0 auto;
     padding: 50px 0px;
-    width: 100%;
+    width: 95%;
     max-width: 1300px;
 }
 
@@ -75,6 +75,11 @@ body {
     display: none;
 }
 
+.header-container{
+    position: sticky;
+    top: 0%;
+    z-index: 9999;
+}
 .header{
     margin:0 auto;
     max-width: 1300px;
@@ -86,14 +91,9 @@ body {
     background-color: var(--color5);
 }
 
-.header-container{
-    position: sticky;
-    top: 0%;
-    z-index: 9999;
-}
 
 .logo-container{
-    height: 80px;
+    height: 100%;
     display: flex;
     align-items: center;
 }
@@ -249,6 +249,14 @@ body {
     background-color: var(--color6);
     margin-top: 30px;
 }
+
+@media (max-width: 1245px){
+
+}
+
+
+
+
 /* ####################### */
 /* Sobre mi */
 
